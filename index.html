@@ -18,10 +18,10 @@
     <h2 class="w-25 p-3">Solicitação de Livros</h2>
   </section>
   
-  <form action="">
+  <form action="" id="formulario" method="post" name="formulario">
     <section>
       <h3 class="w-20 p-2">Selecione o vinculo</h3>
-      <select class="form-select" aria-label="Default select example">
+      <select id="vinculo" class="form-select" aria-label="Default select example">
         <option selected>Seleciono o cinvulo</option>
         <option value="1">Docente</option>
         <option value="2">Discente</option>
@@ -49,7 +49,7 @@
       <div class="w-20 p-2" >
         <h3 class>EDITORA</h3>
         <label for="autor" class="form-label"></label>
-        <input type="number" class="form-control" id="issn" placeholder="Digite a editora do livro, OBS: apenas números">
+        <input type="number" class="form-control" id="editora" placeholder="Digite a editora do livro, OBS: apenas números">
       </div>
     </section>
     
@@ -57,7 +57,7 @@
       <div class="w-20 p-2" >
         <h3 class>TITULO</h3>
         <label for="titulo" class="form-label"></label>
-        <input type="text" class="form-control" id="titulo" placeholder="Digite o ditulo do livro">
+        <input type="text" class="form-control" id="titulo" placeholder="Digite o titulo do livro">
       </div>
     </section>
 
@@ -79,7 +79,7 @@
   </form>
 
   
-  <button type="submit" class="btn btn-danger">"Solicitar livro</button>
+  <button type="button" class="btn btn-danger" id="botao">Solicitar Livro</button>
 
   <h1>TABELA DE SOLICITAÇÃO</h1>
   <table class="table">
@@ -103,5 +103,7 @@
       </tr>
     </tbody>
   </table>
+
+  <script src="./js/validador.js"></script>
 </body>
 </html>
