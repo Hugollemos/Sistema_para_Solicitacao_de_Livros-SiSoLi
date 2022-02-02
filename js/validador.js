@@ -1,41 +1,42 @@
-var botao = document.getElementById("botao");
-
-var vinculo = document.getElementById("vinculo");
-
-var autor = document.getElementById("autor");
-
-var issn = document.getElementById("issn");
-
-var editora = document.getElementById("editora");
-
-var titulo = document.getElementById("titulo");
-
-var edicao = ducument.getElementById("edicao");
-
-var ano = document.getElementById("ano")
-botao.addEventListener("click", ()=> {
-  // Pegando o valor do nome pelos names
-
-  //verificando se o nome está vazio
-  if (titulo.value == "") {
-    alert("Titulo não informado");
-    titulo.focus();
-    return;
-  }
-  if (autor.value == "") {
-    alert("Autor não informado");
-    titulo.focus();
-    return;
-  }
+function chamar() {
   if (vinculo.value == "") {
     alert("Vinculo não informado");
-    titulo.focus();
-    return;
+    vinculo.focus();    
+  } else {
+    vinculo = document.getElementById('vinculo').value;
+    document.getElementById('area01').innerHTML = vinculo;
+
   }
-  if (ano < 1900 && ano > 2019) {
-    alert("Ano de publicação não permitido");
+
+  if (titulo.value == "") {
+    alert("titulo não informado");
     titulo.focus();
-    return;
+  } else {
+    titulo = document.getElementById('titulo').value;
+    document.getElementById('area02').innerHTML = titulo;
+  }
+
+  if (autor.value == "") {
+    alert("Autor não informado");
+    autor.focus();
+  } else {
+    autor = document.getElementById('autor').value;
+    document.getElementById('area03').innerHTML = autor;
   }
   
-})
+  if (ano.value > 1900 && ano.value < 2019) {
+    ano = document.getElementById('ano').value;
+    document.getElementById('area06').innerHTML = ano;
+  } else {
+    alert("ANO DE PUBLICAÇÃO INCORRETO.")
+    ano.focus();
+  }
+  
+  edicao = document.getElementById('edicao').value;
+  document.getElementById('area04').innerHTML = edicao;
+  issn = document.getElementById('issn').value;
+  document.getElementById('area05').innerHTML = issn;
+  editora = document.getElementById('editora').value;
+  document.getElementById('area07').innerHTML = editora;
+  
+}
