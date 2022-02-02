@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <title>SiSLi</title>
+</head>
+<body>
+  
+  <header class="cabecalho">
+    <h1 class="bg-dark p-2 text-dark bg-opacity-10">Sistema para solicitação de livros - SiSLi</h1>
+  </header>
+
+  <section>
+    <h2 class="w-25 p-3">Solicitação de Livros</h2>
+  </section>
+  
+  <form action="">
+    <section>
+      <h3 class="w-20 p-2">Selecione o vinculo</h3>
+      <select class="form-select" aria-label="Default select example">
+        <option selected>Seleciono o cinvulo</option>
+        <option value="1">Docente</option>
+        <option value="2">Discente</option>
+        <option value="3">Técnico</option>
+      </select>
+    </section>
+
+    <section>
+      <div class="w-20 p-2" >
+        <h3 class>AUTOR</h3>
+        <label for="autor" class="form-label"></label>
+        <input type="text" class="form-control" id="autor" placeholder="Digite o autor do livro">
+      </div>
+    </section>
+
+    <section>
+      <div class="w-20 p-2" >
+        <h3 class>ISSN</h3>
+        <label for="autor" class="form-label"></label>
+        <input type="number" class="form-control" id="issn" placeholder="Digite o issn do livro, OBS: apenas números">
+      </div>
+    </section>
+
+    <section>
+      <div class="w-20 p-2" >
+        <h3 class>EDITORA</h3>
+        <label for="autor" class="form-label"></label>
+        <input type="number" class="form-control" id="issn" placeholder="Digite a editora do livro, OBS: apenas números">
+      </div>
+    </section>
+    
+    <section>
+      <div class="w-20 p-2" >
+        <h3 class>TITULO</h3>
+        <label for="titulo" class="form-label"></label>
+        <input type="text" class="form-control" id="titulo" placeholder="Digite o ditulo do livro">
+      </div>
+    </section>
+
+    <section>
+      <div class="w-20 p-2" >
+        <h3 class>EDIÇÃO</h3>
+        <label for="edicao" class="form-label"></label>
+        <input type="text" class="form-control" id="edicao" placeholder="Digite a edição do livro">
+      </div>
+    </section>
+
+    <section>
+      <div class="w-20 p-2" >
+        <h3 class>ANO</h3>
+        <label for="ano" class="form-label"></label>
+        <input type="number" min="1900" class="form-control" id="ano" placeholder="Digite o ano do livro">
+      </div>
+    </section>
+  </form>
+
+  
+  <button type="submit" class="btn btn-danger">"Solicitar livro</button>
+
+  <h1>TABELA DE SOLICITAÇÃO</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Vinculo</th>
+        <th scope="col">Titulo</th>
+        <th scope="col">Autor</th>
+        <th scope="col">Edição</th>
+        <th scope="col">ISSN</th>
+        <th scope="col">Ano</th>
+        <th scope="col">Editora</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"></th>
+        <td>Mark</td>
+      </tr>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
