@@ -18,14 +18,14 @@
     <h2 class="w-25 p-3">Solicitação de Livros</h2>
   </section>
   
-  <form action="" id="formulario" method="post" name="formulario">
+  <form action="" method="post" name="dados" onSubmit="return validador();">
     <section>
       <h3 class="w-20 p-2">Selecione o vinculo</h3>
-      <select id="vinculo" class="form-select" aria-label="Default select example">
-        <option selected>Seleciono o cinvulo</option>
-        <option value="1">Docente</option>
-        <option value="2">Discente</option>
-        <option value="3">Técnico</option>
+      <select id="vinculo" name="vinculo"class="form-select" aria-label="Default select example">
+        <option selected></option>
+        <option value="Docente">Docente</option>
+        <option value="Discente">Discente</option>
+        <option value="Técnico">Técnico</option>
       </select>
     </section>
 
@@ -33,7 +33,7 @@
       <div class="w-20 p-2" >
         <h3 class>AUTOR</h3>
         <label for="autor" class="form-label"></label>
-        <input type="text" class="form-control" id="autor" placeholder="Digite o autor do livro">
+        <input type="text" name="autor" class="form-control" id="autor" placeholder="Digite o autor do livro">
       </div>
     </section>
 
@@ -41,7 +41,7 @@
       <div class="w-20 p-2" >
         <h3 class>ISSN</h3>
         <label for="autor" class="form-label"></label>
-        <input type="number" class="form-control" id="issn" placeholder="Digite o issn do livro, OBS: apenas números">
+        <input type="number" name="issn" class="form-control" id="issn" placeholder="Digite o issn do livro, OBS: apenas números">
       </div>
     </section>
 
@@ -49,7 +49,7 @@
       <div class="w-20 p-2" >
         <h3 class>EDITORA</h3>
         <label for="autor" class="form-label"></label>
-        <input type="number" class="form-control" id="editora" placeholder="Digite a editora do livro, OBS: apenas números">
+        <input type="number" name="editora" class="form-control" id="editora" placeholder="Digite a editora do livro, OBS: apenas números">
       </div>
     </section>
     
@@ -57,7 +57,7 @@
       <div class="w-20 p-2" >
         <h3 class>TITULO</h3>
         <label for="titulo" class="form-label"></label>
-        <input type="text" class="form-control" id="titulo" placeholder="Digite o titulo do livro">
+        <input type="text" name="titulo" class="form-control" id="titulo" placeholder="Digite o titulo do livro">
       </div>
     </section>
 
@@ -65,7 +65,7 @@
       <div class="w-20 p-2" >
         <h3 class>EDIÇÃO</h3>
         <label for="edicao" class="form-label"></label>
-        <input type="text" class="form-control" id="edicao" placeholder="Digite a edição do livro">
+        <input type="text" name="edicao" class="form-control" id="edicao" placeholder="Digite a edição do livro">
       </div>
     </section>
 
@@ -73,19 +73,19 @@
       <div class="w-20 p-2" >
         <h3 class>ANO</h3>
         <label for="ano" class="form-label"></label>
-        <input type="number" min="1900" class="form-control" id="ano" placeholder="Digite o ano do livro">
+        <input type="number" name="ano" min="1900" class="form-control" id="ano" placeholder="Digite o ano do livro">
       </div>
     </section>
+
+    
   </form>
+  <button type="submit" name="submit" class="btn btn-danger" id="botao" value="Enviar dados" onclick="chamar()">Solicitar Livro</button>
 
   
-  <button type="button" class="btn btn-danger" id="botao">Solicitar Livro</button>
-
   <h1>TABELA DE SOLICITAÇÃO</h1>
   <table class="table">
     <thead>
       <tr>
-        <th scope="col">#</th>
         <th scope="col">Vinculo</th>
         <th scope="col">Titulo</th>
         <th scope="col">Autor</th>
@@ -97,13 +97,19 @@
     </thead>
     <tbody>
       <tr>
-        <th scope="row"></th>
-        <td>Mark</td>
+        
+        <td id="area01"></td>
+        <td id="area02"></td>
+        <td id="area03"></td>
+        <td id="area04"></td>
+        <td id="area05"></td>
+        <td id="area06"></td>
+        <td id="area07"></td>
       </tr>
       </tr>
     </tbody>
   </table>
 
-  <script src="./js/validador.js"></script>
+  <script src="./js/inserir.js"></script>
 </body>
 </html>
